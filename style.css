@@ -7,6 +7,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
   margin: 0;
 }
 body {
@@ -22,7 +23,9 @@ body {
   background: rgba(38, 38, 38, 0.5);
   color: #ffffff;
   padding: 10px 20px;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .container {
@@ -203,7 +206,7 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   max-width: 1200px;
-  margin: 400px auto; /* Margin untuk menghindari tumpukan dengan footer */
+  margin: 400px auto;
 }
 
 .about-container {
@@ -217,13 +220,14 @@ main {
   max-width: 50%;
   color: #ffffff;
   flex: 1;
-  min-width: 300px; /* Set minimum width untuk teks di About */
+  min-width: 300px;
 }
 
 .image-content-about {
   max-width: 50%;
   flex: 1;
-  min-width: 300px; /* Set minimum width untuk gambar di About */
+  min-width: 300px;
+  margin-left: 200px;
 }
 
 .rounded-image-about {
@@ -247,7 +251,7 @@ footer {
   padding: 40px 0;
   position: relative;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6);
-  margin-top: auto; /* Menjamin footer berada di bagian bawah halaman */
+  margin-top: auto;
 }
 
 .footer-container {
@@ -311,7 +315,7 @@ footer {
   color: #ffffff;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -324,7 +328,7 @@ footer {
 }
 
 /* Responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .about-container,
   #content {
     flex-direction: column;
@@ -335,12 +339,15 @@ footer {
   .image-content,
   .text-content-about,
   .image-content-about {
-    max-width: 100%;
+    max-width: 30%;
+    margin: 20px;
   }
 
-  .image-content,
-  .image-content-about {
+  .image-content {
     margin-top: 20px;
+  }
+  .image-content-about {
+    margin-right: 2px;
   }
 
   .navmenu a {
