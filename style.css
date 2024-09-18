@@ -311,7 +311,7 @@ footer {
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -324,7 +324,7 @@ footer {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .about-container,
   #content {
     flex-direction: column;
