@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.navbar {
+  background: rgba(38, 38, 38, 0.5);
+  color: #ffffff;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navmenu {
+  display: flex;
+  gap: 20px;
+}
+
+.navmenu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 16px;
+  position: relative;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navmenu a:hover,
+.navmenu a:focus,
+.navmenu a.active {
+  color: #f6b51d;
+  border-bottom: 3px solid #f6b51d;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  margin-top: 3.5px;
+}
+
+.dropdown-btn:hover,
+.dropdown-btn:focus {
+  color: #f6b51d;
+  border-bottom: 3px solid #f6b51d;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Styling untuk konten utama */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-top: 60px; /* Jika diperlukan untuk mengatur jarak antara header dan main */
+}
+
+#content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 40px;
+  flex-wrap: wrap;
+  margin-top: 150px;
+}
+
+.text-content {
+  color: #ffffff;
+  text-align: left;
+  max-width: 50%;
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-content h2 {
+  font-size: 30px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(101, 25, 25, 0.8);
+  font-family: "Poppins";
+}
+
+.text-content h3 {
+  font-size: 37px;
+  color: #a304b1;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  font-family: "Poppins";
+}
+
+.color1 {
+  font-size: 37px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(101, 25, 25, 0.8);
+  font-family: "Poppins";
+}
+
+.color2 {
+  font-size: 37px;
+  color: #ec6403;
+  text-shadow: 0 0 10px rgba(101, 25, 25, 0.8);
+  font-family: "Poppins";
+  margin-left: 10px;
+}
+
+.text-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Styling untuk gambar */
+.image-content {
+  max-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  min-width: 300px;
+}
+
+.rounded-image {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rounded-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling About Section */
+#about {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  max-width: 1200px;
+  margin: 400px auto; /* Margin untuk menghindari tumpukan dengan footer */
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-content-about {
+  max-width: 50%;
+  color: #ffffff;
+  flex: 1;
+  min-width: 300px; /* Set minimum width untuk teks di About */
+}
+
+.image-content-about {
+  max-width: 50%;
+  flex: 1;
+  min-width: 300px; /* Set minimum width untuk gambar di About */
+}
+
+.rounded-image-about {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid #f6b51d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rounded-image-about:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+  background-color: rgba(38, 38, 38, 0.9);
+  color: #ffffff;
+  padding: 40px 0;
+  position: relative;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6);
+  margin-top: auto; /* Menjamin footer berada di bagian bawah halaman */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-section {
+  max-width: 33%;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #f6b51d;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #f6b51d;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section .social img {
+  width: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.footer-section .social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .about-container,
+  #content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content,
+  .image-content,
+  .text-content-about,
+  .image-content-about {
+    max-width: 100%;
+  }
+
+  .image-content,
+  .image-content-about {
+    margin-top: 20px;
+  }
+
+  .navmenu a {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
