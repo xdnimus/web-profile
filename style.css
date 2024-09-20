@@ -197,6 +197,43 @@ main {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
+.rutinitas {
+  margin-top: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(
+    to bottom right,
+    rgb(183, 182, 182),
+    rgb(225, 85, 30)
+  );
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Perbaikan box-shadow */
+}
+
+.rutinitas img {
+  width: 100px;
+  height: auto;
+  margin: 0 25px;
+  animation: zoomIn 1s ease-out both; /* Efek zoom saat halaman dimuat */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rutinitas p {
+  font-family: "Poppins", sans-serif;
+  color: #c8c8c8;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+  animation: slideUp 1s ease-out both; /* Efek slide-up saat halaman dimuat */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.rutinitas p:hover {
+  color: #5900ff; /* Mengubah warna teks saat hover */
+  transform: translateY(-5px); /* Menaikkan teks sedikit saat hover */
+}
 
 /* Styling About Section */
 #about {
@@ -349,6 +386,20 @@ footer {
     width: 150px;
     height: 150px;
     object-fit: cover;
+  }
+  .rutinitas {
+    justify-content: flex-end; /* Menggeser elemen ke kanan */
+    padding: 10px;
+  }
+
+  .rutinitas img {
+    width: 50px; /* Mengecilkan ukuran gambar */
+    margin: 0 15px;
+  }
+
+  .rutinitas p {
+    font-size: 16px;
+    margin-top: 5px;
   }
 }
 
